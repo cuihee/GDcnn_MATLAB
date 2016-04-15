@@ -25,11 +25,11 @@ cnn = cnnsetup(cnn, train_x, train_y);
 
 opts.alpha = 1;
 opts.batchsize = 50;
-opts.numepochs = 10;
+opts.numepochs = 1;
 
 cnn = cnntrain(cnn, train_x, train_y, opts);
 
-[er, bad] = cnntest(cnn, test_x, test_y);
+[er, bad, hh, aa] = cnntest(cnn, test_x, test_y);
 
 
 %%plot mean squared error
